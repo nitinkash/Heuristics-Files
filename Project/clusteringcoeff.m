@@ -1,13 +1,13 @@
 function [cc] = clusteringcoeff (subgraph,G) %tested and OK
 cc = [];
 degree = [];
-rower = 0;
+deg = 0;
 for i=1:length(subgraph)
     for j=1:length(subgraph)
-        rower = rower + G(i,j);
+        deg = deg + G(i,j);
     end
-    degree(i) = rower;
-    rower = 0;
+    degree(i) = deg;
+    deg = 0;
 end  
 %Degree(i) returns the degree of vertex i
 dci = [];

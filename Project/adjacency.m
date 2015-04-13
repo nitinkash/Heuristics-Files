@@ -1,6 +1,7 @@
-function [G] = adjacency(path) %Generates an adjacency Matrix
+function G = adjacency() %Generates an adjacency Matrix
                                 %Tested and OK
 A = [];
+path = 'C:/Nitin/Study/621/Project/karate.gml';
 inputfile = fopen(path);
 l=0;
 k=1;
