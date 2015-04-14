@@ -4,12 +4,10 @@ function [Best_Tour, Dist] = GRASP(D, alpha, Max_Iter)
     Best_Tour = zeros(1,n);
     for k = 1:Max_Iter
        p = rand_greedy(D, alpha);
-       [p_,L] = twoOPT(p,D); 
+       [p_,L] = twoOPT(p, D); 
        if L < Dist
-           Dist = TOUR(D,p_);
+           Dist = L;
            Best_Tour = p_;
-       else
-           continue
        end
     end
     
