@@ -1,8 +1,10 @@
 function [dist, p] = SA_runner(iter)
-    D = TSPtest1(); 
-    [dist,p] = SA(D,10000, .89, 300, 0);
+    D = TSPtest2(); 
+    [dist,p] = SA(D,10000, .89, 30);
+    %This is an improvement stage which runs the simulated annealing
+    %procedure many times to give a better result. This is not required.
     for i = 1:iter
-        [nd, p_] = SA(D,10000, .89, 300, 0);
+        [nd, p_] = SA(D,10000, .89, 30);
         if nd < dist
             dist = nd;
             p = p_;
