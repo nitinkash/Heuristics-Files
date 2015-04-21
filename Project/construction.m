@@ -1,4 +1,4 @@
-function alpha_clusters = construction(alpha)
+function alpha_clusters = construction(alpha) %RUN THIS
     D = adjacency();
     MC = maximalCliques(D);
     [n, numCliques] = size(MC);
